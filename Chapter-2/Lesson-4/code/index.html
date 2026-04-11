@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- internal css  -->
+    <style>
+      /* element selector: select all(<p>) the elements present in body */
+      p {
+        color: palevioletred;
+        background-color: aquamarine;
+      }
+
+      /* group selector  */
+      #heading,
+      .items {
+        background-color: #9b8ec7;
+      }
+    </style>
+
+    <!-- external css  -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header></header>
+
+    <main>
+      <section>
+        <!-- inline css (priority)  -->
+        <p style="color: orange; font-size: 20px; text-align: center">
+          Lorem ipsum dolor sit amet.
+        </p>
+
+        <p>LOREM 1</p>
+        <p>LOREM 2</p>
+
+        <div id="sample">
+          <ul>
+            <li class="items">1</li>
+            <li class="items">2</li>
+            <li class="items">3</li>
+          </ul>
+        </div>
+        <h2 id="heading">Welcome!</h2>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
+
+<!-- style, id(unique), class global attribute  -->
