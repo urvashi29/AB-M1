@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#text {
+  text-align: center;
+  text-decoration: line-through;
+
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Bitcount Grid Double", system-ui;
+  text-transform: capitalize;
+}
+
+#background {
+  background-color: teal;
+  height: 400px;
+  margin-top: 10px;
+
+  background-image: url("../images/Capture.PNG");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* scroll */
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#combinator {
+  color: palevioletred;
+}
+
+.sample {
+  color: orange;
+}
+
+/* combinator  */
+/* child (>) */
+/* select all the <li> which is present as child of <ul> */
+ul > li {
+  color: peru;
+  font-size: 15px;
+}
+
+#list-items > li {
+  background-color: plum;
+}
+
+/* descendant (space */
+body li {
+  font-weight: bolder;
+}
+
+/* general sibling selector (~) */
+#background ~ p {
+  color: blue;
+}
+
+/* adjacent sibling selector (+) */
+#background + h2 {
+  color: aquamarine;
+}
