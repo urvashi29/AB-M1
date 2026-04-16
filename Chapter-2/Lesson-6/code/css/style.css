@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  background-color: aqua;
+
+  /* align content horizontally  */
+  justify-content: space-evenly;
+
+  flex-wrap: wrap;
+
+  /* align content vertically  */
+  align-content: end;
+}
+
+.flex-container > div {
+  width: 40%;
+  border: 1px solid black;
+  height: 200px;
+  background-color: plum;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.container > div {
+  border: 1px solid black;
+  height: 200px;
+  background-color: palegreen;
+}
+
+#static {
+  position: static;
+  width: 100px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+#rel {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: pink;
+  top: 20px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+}
+
+#abs {
+  position: absolute;
+
+  border: 1px solid black;
+  background-color: orange;
+  height: 100px;
+  height: 100px;
+  /* top: 20px;
+  left: 10px; */
+  bottom: 10px;
+  right: 10px;
+}
+
+#fixed {
+  position: fixed;
+  top: 0px;
+}
+
+#sticky {
+  position: sticky;
+  top: 0px;
+}
+
+/* Trnsform */
+#tranform {
+  width: 100px;
+  height: 100px;
+  background-color: palevioletred;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 40px;
+}
+
+/* pseudo class(:) & elements (::) */
+#tranform:hover {
+  transform: rotate(-45deg);
+  transform: scale(1.2, 1.2);
+  transform: skew(20deg, 10deg);
+  transform: translate(20px, 20px);
+}
+
+#transition {
+  width: 100px;
+  height: 100px;
+  background-color: papayawhip;
+  border: 1px dotted black;
+  border-radius: 10px;
+
+  transition-duration: 0.5s;
+  /* ease, ease-in, ease-out  */
+  transition-timing-function: linear;
+  /* transition-delay: 1s; */
+
+  transition-property: transform, border;
+
+  /* property shorthand  */
+  /* transition: border 2s linear 1s, width 1s ease-in 1s */
+}
+
+#transition:hover {
+  transform: scale(1.2, 1.2);
+  border: 1px solid red;
+}
+
+/* Animation  */
+#animate {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 2px solid black;
+  margin: 30px;
+
+  animation-name: box;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes box {
+  25% {
+    background-color: yellowgreen;
+    transform: scale(1.2, 1.2);
+  }
+
+  50% {
+    background-color: orange;
+  }
+
+  70% {
+    background-color: blue;
+  }
+
+  100% {
+    background-color: aquamarine;
+  }
+}
+
+.bounce {
+  width: 50px;
+  height: 50px;
+  background-color: palevioletred;
+  border-radius: 50%;
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 20px);
+  }
+
+  100% {
+    transform: translate(0, 100px);
+  }
+}
